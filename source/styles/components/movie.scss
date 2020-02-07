@@ -1,0 +1,75 @@
+.movie {
+  background-color: $movieBackgroundColor;
+  border: $movieBorder;
+  border-radius: $movieBorderRadius;
+  padding: $moviePadding;
+  display: table;
+
+  &-poster {
+    vertical-align: top;
+    display: table-cell;
+    padding-right: $moviePosterPaddingRight;
+    cursor: pointer;
+
+    img {
+      border-radius: $moviePosterBorderRadius;
+      width: $moviePosterWidth;
+      height: $moviePosterHeight;
+    }
+  }
+
+  &-info {
+    color: $movieInfoTextColor;
+    display: table-cell;
+    max-width: $movieInfoMaxWidth;
+    // position: relative;
+
+    &__title {
+      font: $movieInfoTitleFont;
+    }
+
+    hr {
+      border: 1px solid $movieInfoHrColor;
+      margin-block-end: $movieInfoHrMarginBlockEnd;
+      margin-block-start: $movieInfoHrMarginBlockStart;
+    }
+
+    &__details {
+      font-size: 0.875rem;
+      .rated {
+        color: $movieInfoDetailRatedColor;
+        display: inline-block;
+        font-family: $movieInfoDetailRatedFontFamily;
+        border: $movieInfoDetailRatedBorder;
+        border-radius: $movieInfoDetailRatedBorderRadius;
+        padding: $movieInfoDetailRatedPadding;
+      }
+      .length {
+        display: inline-block;
+        padding-left: $movieInfoDetailLengthPaddingLeft;
+      }
+      .release-date {
+        float: right;
+      }
+    }
+
+    &__plot {
+      padding-top: $movieInfoPlotPaddingTop;
+      padding-bottom: 2.625rem;
+    }
+
+    &__link {
+      text-align: right;
+
+      button {
+        background-color: $movieInfoLinkButtonBackgroundColor;
+        border: unset;
+        border-radius: $movieInfoButtonBorderRadius;
+        color: $movieInfoLinkButtonColor;
+        cursor: pointer;
+        font-size: $movieInfoLinkButtonFontSize;
+        padding: $movieInfoLinkButtonPadding;
+      }
+    }
+  }
+}

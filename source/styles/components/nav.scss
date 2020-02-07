@@ -1,0 +1,27 @@
+.nav-container {
+  padding: 20px;
+  display: flex;
+
+  .nav-item {
+    padding: 0 4px;
+    display: inline-block;
+
+    a {
+      padding: 6px 10px;
+      text-decoration: none;
+      color: $linkColor;
+
+      &:visited {
+        color: $linkColor;
+      }
+
+      &:hover {
+        background-color: $highlightColor;
+      }
+
+      &.active {
+        background-color: $highlightColor;
+      }
+    }
+  }
+}

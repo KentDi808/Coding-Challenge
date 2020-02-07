@@ -1,0 +1,11 @@
+@import 'definitions.scss';
+
+// override any of the component styles here
+
+@import 'movieDefinitions.scss';
+@import 'buttonGroupDefinitions.scss';
+
+@import 'main.scss';
+@import 'components/nav.scss';
+@import 'components/movie.scss';
+@import 'components/buttonGroup.scss';

@@ -1,0 +1,34 @@
+$movieBackgroundColor: rgb(232, 235, 238) !default;
+$movieBorder: 2px solid rgb(48, 52, 54) !default;
+$movieBorderRadius: 10px !default;
+$moviePadding: 1rem !default;
+
+$moviePosterBorderRadius: 10px !default;
+$moviePosterWidth: 140px !default;
+$moviePosterHeight: 208p !default;
+$moviePosterPaddingRight: 1.5rem;
+
+$movieInfoMaxWidth: 498px !default;
+$movieInfoTextColor: rgb(48, 52, 54) !default;
+$movieInfoHrColor: rgb(141, 152, 158) !default;
+
+$movieInfoTitleFont: bold 1.5rem "Open Sans" !default;
+
+$movieInfoHrMarginBlockEnd: 0.25rem !default;
+$movieInfoHrMarginBlockStart: unset !default;
+
+$movieInfoDetailRatedColor: rgb(141, 152, 157) !default;
+$movieInfoDetailRatedBorder: 1px solid $movieInfoDetailRatedColor !default;
+$movieInfoDetailRatedBorderRadius: 0.25rem !default;
+$movieInfoDetailRatedFontFamily: "Courier New", Courier, monospace !default;
+$movieInfoDetailRatedPadding: 0.125rem 0.25rem !default;
+
+$movieInfoDetailLengthPaddingLeft: 1rem !default;
+
+$movieInfoPlotPaddingTop: 1rem !default;
+
+$movieInfoButtonBorderRadius: 0.25rem !default;
+$movieInfoLinkButtonColor: #fff !default;
+$movieInfoLinkButtonBackgroundColor: #f9b44a !default;
+$movieInfoLinkButtonFontSize: 1rem !default;
+$movieInfoLinkButtonPadding: 0.625rem 2.75rem !default;

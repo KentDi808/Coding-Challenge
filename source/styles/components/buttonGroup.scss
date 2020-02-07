@@ -1,0 +1,31 @@
+.button-group {
+  & .button:first-child {
+    border-radius: $buttonGroupBorderRadius 0 0 $buttonGroupBorderRadius;
+  }
+  & .button:last-child {
+    border-radius: 0 $buttonGroupBorderRadius $buttonGroupBorderRadius 0;
+  }
+  .button {
+    background-color: $buttonGroupButtonBackgroundColor;
+    border: $buttonGroupButtonBorder;
+    color: $buttonGroupButtonColor;
+    cursor: pointer;
+    font-size: $buttonGroupButtonFontSize;
+    margin: $buttonGroupButtonMargin;
+    padding: $buttonGroupButtonPadding;
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+
+    &.selected {
+      background-color: $buttonGroupButtonSelectedBackgroundColor;
+      border-color: $buttonGroupButtonSelectedBorderColor;
+      color: $buttonGroupButtonSelectedColor;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "views": {
+    "resultsview": {
+      "btngrp2000s": "2000's",
+      "btngrp1990s": "1990's",
+      "loading": "Loading..."
+    }
+  },
+  "components": {
+    "movielist": {
+      "viewonimdb": "View on IMDB"
+    }
+  }
+}

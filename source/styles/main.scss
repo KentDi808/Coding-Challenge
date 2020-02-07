@@ -1,0 +1,47 @@
+body {
+  font-size: 1rem;
+  font-family: $bodyFontFamily;
+  color: $bodyColor;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.button-group__wrapper {
+  max-width: 698px;
+  text-align: right;
+  padding-bottom: 2.5rem;
+}
+
+.movie {
+  margin-bottom: 1rem;
+}
