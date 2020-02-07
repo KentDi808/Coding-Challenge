@@ -15,13 +15,13 @@ function MovieDetail (props) {
         { releaseDate }
       </div>
     </div>
-  )
+  );
 }
 
 MovieDetail.propTypes = {
   length: PropTypes.string,
   rated: PropTypes.string,
   releaseDate: PropTypes.string,
-}
+};
 
 export default MovieDetail;

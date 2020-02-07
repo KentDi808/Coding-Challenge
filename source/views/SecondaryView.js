@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchMovieList: (t) => dispatch(fetchMovies(t)),
+    fetchMovieList: title => dispatch(fetchMovies(title)),
   };
 };
 
@@ -35,7 +35,7 @@ function SecondaryView (props) {
     if (buttons.length === 0 && ready) {
       setButtons([
         { label: t('views.resultsview.btngrp2000s'), id: 'btn2000s', selected: true },
-        { label: t('views.resultsview.btngrp1990s'), id: 'btn1990s', selected: false }
+        { label: t('views.resultsview.btngrp1990s'), id: 'btn1990s', selected: false },
       ]);
     }
   }, [movies]);
@@ -55,16 +55,19 @@ function SecondaryView (props) {
 
   if (movies) {
     const filteredMovies = movies.filter((movie) => {
-      const year = parseInt(movie.Year);
+      const year = parseInt(movie.Year, 10);
       if (filter === 'btn2000s') {
         return year >= 2000;
       } else if (filter === 'btn1990s') {
         return year < 2000;
       }
+      return false;
     });
+
     const sortedMovies = filteredMovies.sort((a, b) => {
-      return parseInt(a.Year) - parseInt(b.Year);
-    })
+      return parseInt(a.Year, 10) - parseInt(b.Year, 10);
+    });
+
     return (
       <Fragment>
         <div className="button-group__wrapper">
@@ -81,7 +84,7 @@ function SecondaryView (props) {
     );
   } else {
     return (
-      <div>{ t('views.resultsview.loading' )}</div>
+      <div>{ t('views.resultsview.loading') }</div>
     );
   }
 }

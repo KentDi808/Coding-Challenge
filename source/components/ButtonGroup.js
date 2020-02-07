@@ -5,7 +5,7 @@ function ButtonGroup (props) {
   const { buttons, onClick } = props;
 
   function _onClick (evt) {
-    const id = evt.currentTarget.id;
+    const { id } = evt.currentTarget;
     if (onClick) {
       onClick(id);
     }
@@ -16,7 +16,7 @@ function ButtonGroup (props) {
       const { id, label, selected } = btn;
       const classNames = ['button'];
       if (selected) {
-        classNames.push('selected')
+        classNames.push('selected');
       }
 
       return (
@@ -25,18 +25,19 @@ function ButtonGroup (props) {
           id={ id }
           key={ id }
           onClick={ _onClick }
+          type="button"
         >
           { label }
         </button>
-      )
-    })
+      );
+    });
   }
 
   return (
     <div className="button-group">
       { renderButtons() }
     </div>
-  )
+  );
 }
 
 ButtonGroup.propTypes = {

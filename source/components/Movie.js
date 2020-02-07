@@ -5,7 +5,15 @@ import MovieDetail from './MovieDetail';
 
 function Movie (props) {
   const { btnLabel, movieData, onClick } = props;
-  const { imdbID, Plot, Poster, Rated, Released, Runtime, Title } = movieData;
+  const {
+    imdbID,
+    Plot,
+    Poster,
+    Rated,
+    Released,
+    Runtime,
+    Title,
+  } = movieData;
 
   function _onClick () {
     if (onClick) {
@@ -13,6 +21,7 @@ function Movie (props) {
     }
   }
 
+  /* eslint-disable jsx-a11y/click-events-have-key-events */
   return (
     <div
       className="movie"
@@ -21,7 +30,10 @@ function Movie (props) {
         className="movie-poster"
         onClick={ _onClick }
       >
-        <img src={ Poster } />
+        <img
+          alt={ Title }
+          src={ Poster }
+        />
       </div>
       <div
         className="movie-info"
@@ -42,13 +54,15 @@ function Movie (props) {
           <button
             className="link-button"
             onClick={ _onClick }
+            type="button"
           >
             { btnLabel }
           </button>
         </div>
       </div>
     </div>
-  )
+  );
+  /* eslint-enable jsx-a11y/click-events-have-key-events */
 }
 
 Movie.propTypes = {

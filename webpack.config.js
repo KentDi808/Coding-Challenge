@@ -9,6 +9,7 @@ module.exports = {
     filename: 'index.js',
   },
   devtool: 'source-map',
+  mode: 'development',
 
   devServer: {
     inline: true,

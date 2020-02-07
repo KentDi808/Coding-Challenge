@@ -1,11 +1,9 @@
 import axios from 'axios';
-import get from 'lodash.get';
 
 import {
   FETCH_MOVIE_COMPLETED,
   FETCH_MOVIE_FAILED,
-  FETCH_MOVIES_COMPLETED,
-  FETCH_MOVIES_FAILED
+  FETCH_MOVIES_FAILED,
 } from '../constants/action-types';
 
 export const fetchMovies = (title) => {
@@ -19,7 +17,7 @@ export const fetchMovies = (title) => {
       const movies = result.data.Search;
       movies.forEach((movie) => {
         const subOpt = {
-          url: `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=f20a3650`
+          url: `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=f20a3650`,
         };
         axios.request(subOpt).catch((error) => {
           dispatch({ type: FETCH_MOVIE_FAILED, payload: error });
