@@ -32,9 +32,10 @@ module.exports = {
           options: {
             presets: [
               [
-                '@babel/env', {
+                '@babel/preset-env', {
                   'targets': {
-                    'browsers': ['Chrome >= 59']
+                    'chrome': 59,
+                    'ie': 11
                   }
                 }
               ],
