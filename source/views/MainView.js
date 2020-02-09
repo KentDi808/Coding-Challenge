@@ -70,8 +70,8 @@ function MainView (props) {
         btn.label = t('views.resultsview.btngrp1990s');
       }
       return btn;
-    })
-      
+    });
+
     return (
       <Fragment>
         <div className="button-group__wrapper">
